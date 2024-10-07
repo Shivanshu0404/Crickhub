@@ -57,7 +57,7 @@ body{
     z-index: 99;
 }
 #nav img{
-    width: 5rem;
+    width: 4rem;
     border-radius: 20px;
 }
 #nav a:hover{
@@ -68,7 +68,7 @@ body{
     text-transform: uppercase;
     font-weight: 600 ;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 video{
     height: 100%;
@@ -94,7 +94,7 @@ object-fit: cover;
     z-index: 10;
 }
 #page1 h1{
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: 900;
     position: relative; 
 }
@@ -111,10 +111,11 @@ object-fit: cover;
     
     font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-top:1rem;
     text-transform: capitalize;
 }
 #page1 p{
+    margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
     width: 40%;
@@ -188,13 +189,14 @@ object-fit: cover;
     text-align: center;
  }
  #about-us-in h3{
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 20px;
  }
  #about-us-in p{
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 40px;
+    font-weight: 700;
     
  }
  #cards-container{
@@ -239,7 +241,7 @@ object-fit: cover;
 }
 .overlay h4{
     color:#000;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 800;
     white-space: nowrap;
@@ -250,7 +252,7 @@ object-fit: cover;
 }
 .overlay p{
     color:#000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-align: center;
 }
@@ -268,7 +270,7 @@ background:linear-gradient(to left bottom,#119F3A,#ACE022  )
 #green-div h4{
     width: 45%;
     color: #000;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
     line-height: 40px;
@@ -290,7 +292,7 @@ width: 14%;
     position: relative;
 }
 #page3>p{
-font-size: 3rem;
+font-size: 2rem;
 font-weight: 700;
 width: 60%;
 text-align: center;
@@ -409,6 +411,13 @@ line-height: 60px;
 #f2 a:hover{
     color: rgb(18, 9, 194);
 }
+#f3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 #f3 h3{
     font-size:1.6vw;
     white-space: nowrap;
@@ -418,11 +427,12 @@ line-height: 60px;
     margin-bottom: 8px;
 }
 #f3 h1{
-    font-size: 3rem;
-    font-weight: 900;
+    font-size: 2.5rem;
+    font-weight: 800;
     color: #000;
     text-align: center;
     -webkit-text-stroke:2px #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .footer-social {
