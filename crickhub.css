@@ -1,0 +1,605 @@
+@font-face {
+    font-family: montserrat;
+    src: url(converted-fonts/Montserrat-VariableFont_wght.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* perspective: 800px; */
+}
+*::selection{
+    background-color: #fff;
+    color:#95C11E
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 50px;
+}
+body{
+    overflow-x: hidden;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all linear 0.1s;
+}
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e48;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(60px);
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+#nav{
+    height:120px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    width: 5rem;
+    border-radius: 20px;
+}
+#nav a:hover{
+    color: #95C11E;
+    
+}
+#nav a{
+    text-transform: uppercase;
+    font-weight: 600 ;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+position: relative;
+background-color: rgba(0, 0, 0, 0.412);
+object-fit: cover;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 10rem;
+    font-weight: 900;
+    position: relative; 
+}
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: rgba(0, 0, 0, 0.973);
+    top: -6px;
+    left: -6px;
+     -webkit-text-stroke: 2px #95C11E;
+     z-index: -1;
+}
+#page1 h2{
+    
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+#page1 p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 40%;
+    text-transform: capitalize;
+}
+#page2{
+    min-height:100vh;
+    width: 100%;
+    z-index: 10;
+}
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 80px;
+    font-weight: 900;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-right:25px ;
+     -webkit-text-stroke:2px #95C11E;
+     color: transparent;
+     transition: all linear 0.5s;
+}
+#scroller h4:hover{
+    color:#95C11E;
+
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+ @keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%)
+    }
+ }
+ #about-us{
+    height:40vh;
+    width:100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 10vh;
+ }
+ #about-us img{
+    width:10rem;
+    
+    border-radius: 30px;
+    object-fit: cover;
+ }
+ #about-us-in{
+    width: 50%;
+    text-align: center;
+ }
+ #about-us-in h3{
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+ }
+ #about-us-in p{
+    font-size: 2rem;
+    line-height: 40px;
+    
+ }
+ #cards-container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:90px;
+    position: relative;
+    z-index: 10;
+    margin-top: 10vh;
+ }
+.card{
+    height: 80%;
+    width: 22%;
+    border-radius: 24px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#card1{
+    background-image: url(images/tall-all-white-cricket-4k-ywasfquqmtvsilmk.webp) ;
+    
+}
+#card2{
+    background-image: url(images/clean-cricket-4k-zp61rmf8n7ossxsv.webp);
+}
+#card3{
+    background-image: url(images/cricket-bat-and-ball-421.webp);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    padding: 30px;
+    padding-top: 50px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.card:hover .overlay{
+    opacity:1;
+}
+.overlay h4{
+    color:#000;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 30px;
+
+
+}
+.overlay p{
+    color:#000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
+#green-div{
+    height: 30vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background:linear-gradient(to left bottom,#119F3A,#ACE022  )
+
+}
+#green-div h4{
+    width: 45%;
+    color: #000;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-align: center;
+}
+#green-div img{
+height: 100%;
+object-fit: cover;
+width: 14%;
+
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page3>p{
+font-size: 3rem;
+font-weight: 700;
+width: 60%;
+text-align: center;
+line-height: 60px;
+}
+#page3 img{
+    height: 60px;
+    position: absolute;
+}
+#page3 #colon1{
+    left:12%;
+    top:20%;
+}
+#page3 #colon2{
+    right:15%;
+    bottom:25%;
+}
+
+#page4{
+    height: 30vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    /* background-color: red; */
+}
+#page4 .elem{
+    height: 70%;
+    width:25%;
+    overflow:hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.elem h2{
+    height:100%;
+    width:100%;
+    background-color: #95C11E;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    white-space: nowrap;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 1s;
+}
+.elem img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transition: all ease 1s;
+    scale:1.1;
+}
+.elem:hover h2{
+    color:#fff;
+    background-color: transparent;
+}
+.elem:hover img{
+    scale:1;
+}
+#page4 h1{
+    font-size: 100px;
+    position:absolute;
+    top:-20%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+#footer{
+    height:40vh;
+    width:100%;
+    display: flex;
+    position: relative;
+    background:linear-gradient(to left bottom ,#119F3A,#ACE022);
+    align-items: center;
+    justify-content: space-evenly;
+    gap:6.5vw;
+    padding: 0,100px;
+
+}
+#footer>img{
+    height: 100%;
+    position: absolute;
+    left:0;
+    z-index: 0;
+}
+#footer #f1 img{
+    height: 20vh;
+    border-radius: 20%;
+}
+#f1,#f2,#f3,#f4{
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+}
+#f2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#f2 a{
+    font-size:1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+#f2 a:hover{
+    color: rgb(18, 9, 194);
+}
+#f3 h3{
+    font-size:1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+#f3 h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+    -webkit-text-stroke:2px #fff;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0.8rem;
+    gap: 0.5rem;
+}
+
+.footer-social a {
+    color: white; /* Adjust the icon color as needed */
+    margin-right: 2rem; /* Spacing between icons */
+    font-size: 2rem; /* Size of the icons */
+    font-weight: 700;
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-social a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+#f4 h4{
+    font-size:1.5rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+#f4  a { 
+    color: white; /* Adjust color as needed */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#dir:hover{
+    color: #007bff;
+}
+
+#copy{
+    width: 100%;
+     background-color: #96c11e35;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height:6vh;
+}
+#copy p{
+    font-size: 1.6vw;
+    font-weight: 700;
+    padding: 0.5vh;
+    text-decoration:dashed;
+    color: #000;
+}
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    #nav {
+        padding:auto;
+        flex-direction: row; /* Stack items vertically */
+        height: auto; /* Allow height to be dynamic */
+        gap: 10px; /* Reduce gap between items */
+        transition: all ease 0.1s;
+    }
+
+    #nav a {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    #page1 h1 {
+        font-size: 60px; /* Smaller heading */
+    }
+
+    #page1 h2 {
+        font-size: 24px; /* Smaller subheading */
+    }
+
+    #page1 p {
+        width: 90%; /* Use more width on mobile */
+    }
+
+    #about-us {
+        flex-direction: column; /* Stack image and text */
+        padding: 0 20px; /* Reduce padding */
+    }
+
+    #about-us img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #cards-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 20px; /* Reduce gap */
+    }
+
+    .card {
+        width: 90%; /* Make cards wider on mobile */
+        height: auto; /* Dynamic height */
+    }
+
+    #page4 .elem {
+        width: 90%; /* Make elements wider */
+    }
+
+    #footer {
+        flex-direction: column; /* Stack footer items */
+        align-items: center; /* Center items */
+    }
+
+    #footer > img {
+        height: 10vh; /* Smaller logo size */
+    }
+
+    #f1, #f2, #f3, #f4 {
+        width: 100%; /* Make footer items full width */
+        text-align: center; /* Center text */
+    }
+
+    #copy p {
+        font-size: 1.2rem; /* Smaller footer text */
+    }
+}
+
+/* Tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    #nav {
+        padding: auto; /* Moderate padding */
+        gap: 30px; /* Moderate gap */
+    }
+
+    #page1 h1 {
+        font-size: 80px; /* Adjust heading size */
+    }
+
+    #page1 h2 {
+        font-size: 28px; /* Adjust subheading size */
+    }
+
+    #about-us {
+        padding: 0 30px; /* Reduce padding */
+    }
+
+    #about-us img {
+        width: 150px; /* Responsive image size */
+        height: 150px; /* Maintain aspect ratio */
+    }
+
+    #cards-container {
+        flex-direction: row; /* Keep cards in a row */
+        gap: 40px; /* Moderate gap */
+    }
+
+    .card {
+        width: 30%; /* Wider cards on tablets */
+    }
+
+    #page4 .elem {
+        width: 30%; /* Wider elements */
+    }
+
+    #footer {
+        flex-direction: row; /* Keep footer items in a row */
+        justify-content: space-between; /* Distribute space */
+    }
+
+    #f1, #f2, #f3, #f4 {
+        width: auto; /* Automatic width */
+        text-align: center; /* Center text */
+    }
+
+    #copy p {
+        font-size: 1.4rem; /* Adjust footer text size */
+    }
+}
+
+
+
