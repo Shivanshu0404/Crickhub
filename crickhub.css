@@ -50,25 +50,28 @@ body{
     /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding:0 150px;
-    gap: 50px;
+    justify-content: space-evenly;
     position: fixed;
     z-index: 99;
 }
 #nav img{
-    width: 4rem;
-    border-radius: 20px;
+    width: 4vmax;
+    border-radius: 20%;
 }
-#nav a:hover{
+.nav-part2 a:hover{
     color: #95C11E;
     
 }
-#nav a{
+.nav-part2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmax;
+}
+.nav-part2 a{
     text-transform: uppercase;
-    font-weight: 600 ;
+    font-weight: 800 ;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2vmax;
 }
 video{
     height: 100%;
@@ -81,6 +84,8 @@ video{
 position: relative;
 background-color: rgba(0, 0, 0, 0.412);
 object-fit: cover;
+width: 100%;
+
 }
 #page1{
     height: 100vh;
@@ -94,7 +99,7 @@ object-fit: cover;
     z-index: 10;
 }
 #page1 h1{
-    font-size: 5.9rem;
+    font-size: 6vmax;
     font-weight: 900;
     position: relative; 
 }
@@ -109,14 +114,14 @@ object-fit: cover;
 }
 #page1 h2{
     
-    font-size: 2rem;
+    font-size: 2vmax;
     font-weight: 800;
     margin-top:1rem;
     text-transform: capitalize;
 }
 #page1 p{
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.5vmax;
     font-weight: 600;
     width: 40%;
     text-transform: capitalize;
@@ -132,13 +137,14 @@ object-fit: cover;
     overflow-y: hidden;
     position: relative;
     z-index: 10;
+    margin-bottom: 10%;
 }
 #scroller::-webkit-scrollbar{
     display: none;
 }
 #scroller h4{
     display: inline-block;
-    font-size: 80px;
+    font-size: 5vmax;
     font-weight: 900;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      margin-right:25px ;
@@ -154,7 +160,7 @@ object-fit: cover;
     display: inline-block;
     white-space: nowrap;
     animation: scroll;
-    animation-duration: 20s;
+    animation-duration: 8s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     width: 100%;
@@ -172,16 +178,16 @@ object-fit: cover;
     height:40vh;
     width:100%;
     display: flex;
-    padding: 0 50px;
+    padding: 0 1vw;
     align-items: center;
     justify-content: space-around;
     position: relative;
-    margin-top: 10vh;
+    margin-top: 5rem;
  }
  #about-us img{
-    width:10rem;
+    width:8vmax;
     
-    border-radius: 30px;
+    border-radius: 30%;
     object-fit: cover;
  }
  #about-us-in{
@@ -189,13 +195,13 @@ object-fit: cover;
     text-align: center;
  }
  #about-us-in h3{
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 3vmax;
+    font-weight: 700;
     margin-bottom: 20px;
  }
  #about-us-in p{
-    font-size: 1.2rem;
-    line-height: 40px;
+    font-size: 2vmax;
+    line-height: 2vmax;
     font-weight: 700;
     
  }
@@ -231,8 +237,8 @@ object-fit: cover;
     height: 100%;
     width: 100%;
     background-color: #95C11E;
-    padding: 30px;
-    padding-top: 50px;
+    padding: 1vw;
+    padding-top: 5vh;
     opacity: 0;
     transition: all ease 0.6s;
 }
@@ -241,7 +247,7 @@ object-fit: cover;
 }
 .overlay h4{
     color:#000;
-    font-size: 1.5rem;
+    font-size: 2vmax;
     text-transform: uppercase;
     font-weight: 800;
     white-space: nowrap;
@@ -252,7 +258,7 @@ object-fit: cover;
 }
 .overlay p{
     color:#000;
-    font-size: 1.2rem;
+    font-size: 1.5vmax;
     font-weight: 700;
     text-align: center;
 }
@@ -270,10 +276,10 @@ background:linear-gradient(to left bottom,#119F3A,#ACE022  )
 #green-div h4{
     width: 45%;
     color: #000;
-    font-size: 2rem;
+    font-size: 2vmax;
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 40px;
+    line-height: 3vw;
     text-align: center;
 }
 #green-div img{
@@ -292,14 +298,14 @@ width: 14%;
     position: relative;
 }
 #page3>p{
-font-size: 2rem;
+font-size: 2vmax;
 font-weight: 700;
 width: 60%;
 text-align: center;
-line-height: 60px;
+line-height: 3vw;
 }
 #page3 img{
-    height: 60px;
+    width: 4vmax;
     position: absolute;
 }
 #page3 #colon1{
@@ -312,7 +318,7 @@ line-height: 60px;
 }
 
 #page4{
-    height: 30vh;
+    height: 40vh;
     width:100%;
     display:flex;
     align-items: center;
@@ -336,8 +342,7 @@ line-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    white-space: nowrap;
+    font-size: 2vmax;
     font-weight: 800;
     position: absolute;
     z-index: 10;
@@ -358,9 +363,9 @@ line-height: 60px;
     scale:1;
 }
 #page4 h1{
-    font-size: 100px;
+    font-size: 5vmax;
     position:absolute;
-    top:-20%;
+    top:-5%;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     color: #000;
@@ -385,7 +390,7 @@ line-height: 60px;
     z-index: 0;
 }
 #footer #f1 img{
-    height: 20vh;
+    width: 7vmax;
     border-radius: 20%;
 }
 #f1,#f2,#f3,#f4{
@@ -400,7 +405,7 @@ line-height: 60px;
     align-items: center;
 }
 #f2 a{
-    font-size:1.6vw;
+    font-size:1.5vmax;
     white-space: nowrap;
     text-transform: uppercase;
     color: #000;
@@ -419,7 +424,7 @@ line-height: 60px;
     
 }
 #f3 h3{
-    font-size:1.6vw;
+    font-size:2vmax;
     white-space: nowrap;
     text-transform: uppercase;
     color: #000;
@@ -427,7 +432,7 @@ line-height: 60px;
     margin-bottom: 8px;
 }
 #f3 h1{
-    font-size: 2.5rem;
+    font-size: 2vmax;
     font-weight: 800;
     color: #000;
     text-align: center;
@@ -446,7 +451,7 @@ line-height: 60px;
 .footer-social a {
     color: white; /* Adjust the icon color as needed */
     margin-right: 2rem; /* Spacing between icons */
-    font-size: 2rem; /* Size of the icons */
+    font-size: 1.5vmax; /* Size of the icons */
     font-weight: 700;
     text-decoration: none; /* Remove underline */
 }
@@ -456,7 +461,7 @@ line-height: 60px;
 }
 
 #f4 h4{
-    font-size:1.5rem;
+    font-size:1.5vmax;
     white-space: nowrap;
     text-transform: uppercase;
     color: #000;
@@ -467,7 +472,7 @@ line-height: 60px;
 #f4  a { 
     color: white; /* Adjust color as needed */
     text-decoration: none; /* Remove underline */
-    font-size: 1.5rem;
+    font-size: 2vmax;
     font-weight: 600;
 }
 
@@ -484,131 +489,173 @@ line-height: 60px;
     height:6vh;
 }
 #copy p{
-    font-size: 1.6vw;
+    font-size: 1.5vmax;
     font-weight: 700;
     padding: 0.5vh;
     text-decoration:dashed;
     color: #000;
 }
-/* Mobile devices (up to 600px) */
-@media (max-width: 600px) {
-    #nav {
-        padding:auto;
-        flex-direction: row; /* Stack items vertically */
-        height: auto; /* Allow height to be dynamic */
-        gap: 10px; /* Reduce gap between items */
-        transition: all ease 0.1s;
+@media  (max-width:600px) {
+    
+    #nav img{
+        width: 8vmax;
+        border-radius: 20%;
+        padding-left: 3vw;
     }
-
-    #nav a {
-        font-size: 0.9rem; /* Smaller font size */
+    .nav-part2 a{
+        text-transform: uppercase;
+        font-weight: 800 ;
+        text-decoration: none;
+        font-size: 2vmax;
     }
-
-    #page1 h1 {
-        font-size: 60px; /* Smaller heading */
+    .nav-part2{
+        padding-left: 3vw;
+        display: flex;
+        
     }
-
-    #page1 h2 {
-        font-size: 24px; /* Smaller subheading */
+    #page1 h1{
+        font-size: 7vmax;
     }
-
-    #page1 p {
-        width: 90%; /* Use more width on mobile */
+    #page1 h2{
+        font-size: 3vmax;
     }
-
-    #about-us {
-        flex-direction: column; /* Stack image and text */
-        padding: 0 20px; /* Reduce padding */
+    #page1 p{
+        font-size: 2vmax;
     }
-
-    #about-us img {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
+    #about-us{
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10vh;
     }
-
-    #cards-container {
-        flex-direction: column; /* Stack cards vertically */
-        gap: 20px; /* Reduce gap */
+    #about-us img{
+        width: 30vw;
     }
-
-    .card {
-        width: 90%; /* Make cards wider on mobile */
-        height: auto; /* Dynamic height */
+    #about-us-in{
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
-
-    #page4 .elem {
-        width: 90%; /* Make elements wider */
+    #about-us-in h3{
+        font-size: 3vmax;
     }
-
-    #footer {
-        flex-direction: column; /* Stack footer items */
-        align-items: center; /* Center items */
+    #about-us-in p{
+        font-size: 2.5vmax;
+        line-height: 3vh;
     }
-
-    #footer > img {
-        height: 10vh; /* Smaller logo size */
-    }
-
-    #f1, #f2, #f3, #f4 {
-        width: 100%; /* Make footer items full width */
-        text-align: center; /* Center text */
-    }
-
-    #copy p {
-        font-size: 1.2rem; /* Smaller footer text */
-    }
+    #cards-container{
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2vmax;
+     }
+     .card{
+        width: 40vmax;
+        height: 30vmax;
+     }
+     #page3 p{
+        font-size: 3vmax;
+        line-height: 3vh;
+     }
+     #page4 {
+        height: auto;
+        flex-direction: column;
+        height: 100vh;
+        gap:2vh;
+        align-items: center;
+        justify-content: center;
+        
+     }
+     #green-div h4{
+        font-size: 2vmax;
+        line-height: 2vmax;
+     }
+     #page4 h1{
+          font-size: 4vmax;
+          white-space: wrap;
+          text-align: center;
+     }
+      .elem{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+     
+     .elem h2{
+         font-size: 1.5vmax;
+         text-align: center;
+         white-space: wrap;
+         width: 30vw;
+         height: 100%;
+         
+     }
+     .elem img{
+        width: 50vmax;
+        border-radius: 10%;
+     }
+     #footer{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+        margin-top: 5vh;
+     }
+     #footer img{
+        width: 10vmax;
+     }
+     
+     #f1 img{
+        margin-top: 2vh;
+     }
+     #f2 a{
+        font-size: 3vmax;
+     }
+     #f3 h1{
+        font-size:4vmax;
+        color: #007bff;
+        -webkit-text-stroke:1px #000;
+     }
+     #f3 a{
+        font-size: 3vmax;
+     }
+     #f4 h4{
+        font-size: 2vmax;
+        font-weight: 800;
+        margin-bottom: auto;
+     }
+     #f4 a{
+        font-size: 2.5vmax;
+     }
+     #copy{
+        position: relative;
+        height: auto;
+     }
+     #copy p{
+        font-size: 2vmax;
+     }
 }
-
-/* Tablets (601px to 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    #nav {
-        padding: auto; /* Moderate padding */
-        gap: 30px; /* Moderate gap */
+@media  (max-width:400px) {
+    #page1 h1{
+        font-size: 4vmax;
+        margin-top: 5vh;
+        
     }
-
-    #page1 h1 {
-        font-size: 80px; /* Adjust heading size */
+    .nav-part2{
+        justify-content: space-evenly;
+        gap: 1vmax;
+        margin-top: 1vh;
     }
-
-    #page1 h2 {
-        font-size: 28px; /* Adjust subheading size */
+    #page1 p{
+        width: 70%;
     }
-
-    #about-us {
-        padding: 0 30px; /* Reduce padding */
+    #about-us-in p{
+        font-size: 2vmax;
+        line-height: 3vh;
     }
-
-    #about-us img {
-        width: 150px; /* Responsive image size */
-        height: 150px; /* Maintain aspect ratio */
-    }
-
-    #cards-container {
-        flex-direction: row; /* Keep cards in a row */
-        gap: 40px; /* Moderate gap */
-    }
-
-    .card {
-        width: 30%; /* Wider cards on tablets */
-    }
-
-    #page4 .elem {
-        width: 30%; /* Wider elements */
-    }
-
-    #footer {
-        flex-direction: row; /* Keep footer items in a row */
-        justify-content: space-between; /* Distribute space */
-    }
-
-    #f1, #f2, #f3, #f4 {
-        width: auto; /* Automatic width */
-        text-align: center; /* Center text */
-    }
-
-    #copy p {
-        font-size: 1.4rem; /* Adjust footer text size */
-    }
+    
 }
 
 
