@@ -32,7 +32,7 @@ body{
     border-radius: 50%;
     position: fixed;
     z-index: 99;
-    transition: all linear 0.1s;
+    transition: all linear 0.01s;
 }
 #cursor-blur{
     height: 400px;
@@ -42,7 +42,7 @@ body{
     position: fixed;
     filter: blur(60px);
     z-index: 9;
-    transition: all linear 0.4s;
+    transition: all linear 0.1s;
 }
 #nav{
     height:120px;
